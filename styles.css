@@ -1,10 +1,9 @@
-/* Main page */
+/* Page */
 body {
     font-family: Arial, sans-serif;
     background-color: #eef2f7;
     color: #222;
     margin: 0;
-    padding: 0;
 }
 
 /* Header */
@@ -15,9 +14,7 @@ header {
     text-align: center;
 }
 
-header h1,
-header h2,
-header h3 {
+header h1, header h2, header h3 {
     margin: 10px 0;
 }
 
@@ -41,25 +38,25 @@ nav a:hover {
     background-color: #dbe9ff;
 }
 
-/* Main area */
+/* Main layout */
 main {
     max-width: 1000px;
     margin: 30px auto;
     padding: 20px;
 }
 
-/* Sections */
+/* Sections (cards) */
 section {
     background-color: white;
     margin-bottom: 25px;
     padding: 25px;
     border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* Headings */
 h2 {
     color: #2c3e50;
-    margin-top: 0;
 }
 
 h3 {
@@ -72,37 +69,22 @@ ul, ol {
     line-height: 1.6;
 }
 
-/* Paragraphs */
-p {
-    line-height: 1.6;
-}
-
 /* Media */
 img {
     width: 350px;
     max-width: 100%;
     border-radius: 12px;
-    border: 2px solid #dcdde1;
-}
-
-audio {
-    width: 300px;
-    max-width: 100%;
+    border: 2px solid #ddd;
 }
 
 video {
     width: 350px;
     max-width: 100%;
     border-radius: 12px;
-    border: 2px solid #dcdde1;
 }
 
-/* Details */
-details {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #f7f9fc;
-    border-radius: 8px;
+audio {
+    width: 300px;
 }
 
 /* Form */
@@ -119,16 +101,14 @@ fieldset {
     padding: 20px;
 }
 
-input,
-select,
-textarea,
-button {
+input, select, textarea {
+    display: block;
     margin-top: 8px;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #bbb;
-    font-size: 14px;
+    width: 250px;
 }
 
 textarea {
@@ -136,10 +116,13 @@ textarea {
     max-width: 500px;
 }
 
+/* Button */
 button {
     background-color: #4a69bd;
     color: white;
     border: none;
+    padding: 10px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -147,30 +130,12 @@ button:hover {
     background-color: #3b55a0;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #555;
-}
-
-/* Small screens */
+/* Mobile */
 @media (max-width: 700px) {
-    header {
-        padding: 20px;
-    }
-
     nav a {
         display: block;
-        margin: 8px auto;
         width: 80%;
-    }
-
-    main {
-        padding: 12px;
-    }
-
-    section {
-        padding: 18px;
+        margin: 8px auto;
+        text-align: center;
     }
 }
