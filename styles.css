@@ -1,4 +1,7 @@
-/* Page */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #eef2f7;
@@ -6,7 +9,6 @@ body {
     margin: 0;
 }
 
-/* Header */
 header {
     background: linear-gradient(135deg, #2c3e50, #4a69bd);
     color: white;
@@ -14,13 +16,28 @@ header {
     text-align: center;
 }
 
-header h1, header h2, header h3 {
+header h1,
+header h2,
+header h3 {
     margin: 10px 0;
 }
 
-/* Navigation */
+header h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header h2 {
+    opacity: 0.9;
+}
+
+header h3 {
+    opacity: 0.8;
+}
+
 nav {
     margin-top: 20px;
+    text-align: center;
 }
 
 nav a {
@@ -32,29 +49,28 @@ nav a {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
+    transition: all 0.2s ease;
 }
 
 nav a:hover {
     background-color: #dbe9ff;
+    transform: translateY(-2px);
 }
 
-/* Main layout */
 main {
     max-width: 1000px;
     margin: 30px auto;
     padding: 20px;
 }
 
-/* Sections (cards) */
 section {
     background-color: white;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     padding: 25px;
     border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings */
 h2 {
     color: #2c3e50;
 }
@@ -63,13 +79,16 @@ h3 {
     color: #4a69bd;
 }
 
-/* Lists */
-ul, ol {
+ul,
+ol {
     padding-left: 25px;
     line-height: 1.6;
 }
 
-/* Media */
+p {
+    line-height: 1.6;
+}
+
 img {
     width: 350px;
     max-width: 100%;
@@ -81,13 +100,21 @@ video {
     width: 350px;
     max-width: 100%;
     border-radius: 12px;
+    border: 2px solid #ddd;
 }
 
 audio {
     width: 300px;
+    max-width: 100%;
 }
 
-/* Form */
+details {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+}
+
 form {
     background-color: #fcfcfc;
     padding: 20px;
@@ -101,14 +128,16 @@ fieldset {
     padding: 20px;
 }
 
-input, select, textarea {
-    display: block;
+input,
+select,
+textarea,
+button {
     margin-top: 8px;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #bbb;
-    width: 250px;
+    font-size: 14px;
 }
 
 textarea {
@@ -116,13 +145,10 @@ textarea {
     max-width: 500px;
 }
 
-/* Button */
 button {
     background-color: #4a69bd;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -130,12 +156,29 @@ button:hover {
     background-color: #3b55a0;
 }
 
-/* Mobile */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+}
+
 @media (max-width: 700px) {
+    header {
+        padding: 20px;
+    }
+
     nav a {
         display: block;
         width: 80%;
         margin: 8px auto;
         text-align: center;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    section {
+        padding: 18px;
     }
 }
